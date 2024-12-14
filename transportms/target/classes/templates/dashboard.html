@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIU Transportation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" th:href="@{/design.css}">
+</head>
+
+<body>
+<div class="sidebar">
+    <div class="sidebar-header">
+        <h2>DIU Transport</h2>
+        <img th:src="@{/images/logo.png}" alt="Logo" class="logo">
+    </div>
+    <ul class="sidebar-menu">
+        <li><a th:href="@{/}">Home</a></li>
+        <li><a th:href="@{/services}">Services</a></li>
+        <li><a href="#routesSection">Routes</a></li>
+        <li><a href="#contact-section">Contact</a></li>
+        <li><a href="https://studentportal.diu.edu.bd/" target="_blank">Student Portal</a></li>
+        <li><a href="https://faculty.daffodilvarsity.edu.bd/" target="_blank">DIU Faculty Portal</a></li>
+        <li><a href="https://daffodilvarsity.edu.bd/" target="_blank">DIU Homepage</a></li>
+    </ul>
+
+    <div class="sidebar-login">
+        <button id="ticketButton">Ticket</button>
+    </div>
+</div>
+
+<div class="content">
+    <header>
+        <h1>Welcome to DIU Transportation</h1>
+        <img th:src="@{/images/main.jpg}" alt="DIU">
+        <div class="announcement-bar">
+            <p>Notice: Buses from Mirpur will be delayed by 15 minutes due to traffic.</p>
+        </div>
+        <p>DIU Transportation is committed to providing reliable, safe, and efficient transportation services for students, staff, and faculty. With real-time tracking, seat booking, and optimized routes, we ensure a seamless journey experience. Whether you're commuting from Mirpur, Dhanmondi, Uttara, or beyond, our service prioritizes your convenience and punctuality.</p>
+    </header>
+
+    <section class="interactive-section">
+        <h2>What We Offer</h2>
+        <div class="service-cards">
+            <div class="card">
+                <img th:src="@{/images/R.jpg}" alt="Service 1">
+                <h3>Real-time Tracking</h3>
+                <p>Track buses in real-time for better planning.</p>
+            </div>
+            <div class="card">
+                <img th:src="@{/images/sit.png}" alt="Service 2">
+                <h3>Seat Booking</h3>
+                <p>Book your seat in advance for a smooth journey.</p>
+            </div>
+            <div class="card">
+                <img th:src="@{/images/R2.jpg}" alt="Service 3">
+                <h3>Route Optimization</h3>
+                <p>Optimized routes to reduce travel time and increase convenience.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="routes-section" id="routesSection">
+        <input type="text" id="routeSearch" placeholder="Search for a route..." class="search-bar">
+        <h2>Our Routes</h2>
+        <div class="route-cards">
+            <div class="card">
+                <h3>Mirpur to DSC</h3>
+                <p>Reliable transportation from Mirpur to Daffodil International University.</p>
+            </div>
+            <div class="card">
+                <h3>Dhanmondi to DSC</h3>
+                <p>Convenient and safe trips for students and faculty.</p>
+            </div>
+            <div class="card">
+                <h3>Uttara to DSC</h3>
+                <p>Fast and comfortable service connecting Uttara to DSC.</p>
+            </div>
+            <div class="card">
+                <h3>ECB to DSC</h3>
+                <p>Direct route for efficient commuting.</p>
+            </div>
+            <div class="card">
+                <h3>Narayangonj to DSC</h3>
+                <p>Ensuring hassle-free transportation from Narayangonj.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contactUs">
+        <div class="contact-container">
+            <h2>Contact Us</h2>
+            <p>Have questions or need assistance? Fill out the form below and we'll get back to you promptly!</p>
+            <form class="contact-form" th:action="@{/contact}" method="post">
+                <input type="text" id="contactName" name="name" placeholder="Your Name" required>
+                <input type="email" id="contactEmail" name="email" placeholder="Your Email" required>
+                <textarea id="contactMessage" name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>Click this img to check the campus location</p>
+        <a href="https://maps.app.goo.gl/3Z794YyzfAhkQVkT7" target="_blank">
+            <img th:src="@{/images/mapLink.png}" alt="map" width="200" height="auto">
+        </a>
+        <p>&copy; 2024 DIU Transportation. All rights reserved. <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+</div>
+
+<!-- Logout Button -->
+<div style="position: fixed; top: 10px; right: 10px;">
+    <a th:href="@{/logout}" class="btn btn-primary" style="padding: 8px 16px; font-size: 14px;">Logout</a>
+</div>
+
+<button id="backToTop" style="
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+">↑</button>
+
+<script th:src="@{/script.js}"></script>
+</body>
+
+</html>

@@ -1,25 +1,29 @@
 package com.transportms.transportms.model;
-
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 @Entity
 @Table(name = "users")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // Auto-increment primary key
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, unique = true) // Email must be unique and not null
-    private String email;
-
-    @Column(nullable = false) // Name cannot be null
+    @Column(nullable = false)
     private String name;
 
-    @Column(nullable = false) // Password cannot be null
+    @Column(nullable = false, unique = true)
+    private String email;
+
+    @Column(nullable = false)
     private String password;
+
+    @Column(nullable = false)
+    private String role;
 }
