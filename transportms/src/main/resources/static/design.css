@@ -1,0 +1,527 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #022e41, #3a8d99);
+    color: #fff;
+}
+
+.announcement-bar {
+    background-color: #ffcc00;
+    color: #333;
+    text-align: center;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: #001f3d;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar-header h2 {
+    color: #fff;
+    font-size: 24px;
+}
+
+.sidebar-header .logo {
+    width: 80px;
+    margin-top: 10px;
+    border-radius: 50%;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sidebar-menu li {
+    margin: 15px 0;
+}
+
+.sidebar-menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-menu li a:hover {
+    color: #ffcc00;
+}
+
+.sidebar-login button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.sidebar-login button:hover {
+    background-color: #0056b3;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 30px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+header h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.interactive-section {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.interactive-section h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.card h3 {
+    font-size: 22px;
+    color: #333;
+    margin-top: 15px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 350px;
+}
+
+.login-form h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #00b5cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-form button:hover {
+    background-color: #0286b3;
+}
+
+/* Contact Us Section */
+#contactUs {
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #001f3d, #3a8d99);
+    color: #fff;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-container h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.contact-container p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #fff;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #3d11cd;
+    outline: none;
+}
+
+.contact-form button {
+    background-color: #30c1a9;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.contact-form button:hover {
+    background-color: #0286b3;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 20px;
+    }
+}
+
+
+footer {
+    background-color: #001f3d;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .service-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* Floating Action Button */
+#fab {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #3d11cd;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 50px;
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 9999;
+    transition: background-color 0.3s ease;
+    width: 120px;
+}
+
+
+#fab:hover {
+    background-color: #0286b3;
+}
+.routes-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #3a8d99, #001f3d);
+    color: #fff;
+}
+
+.routes-section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.route-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.route-cards .card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    padding: 20px;
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.route-cards .card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.route-cards .card p {
+    font-size: 16px;
+    color: #555;
+}
+
+.route-cards .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+.search-bar {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Login Form (Modal Style) */
+.login-form-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.login-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    text-align: center;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.login-form button {
+    background-color: #30c1a9;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-form button:hover {
+    background-color: #0286b3;
+}
+
+.btn-close {
+    background-color: #ccc;
+    margin-top: 10px;
+}
+/* Ticket Form Modal */
+#ticketForm {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for better focus */
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#ticketForm .login-form {
+    background-color: #f9f9f9; /* Light background for better readability */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    text-align: center;
+    animation: fadeIn 0.5s ease; /* Smooth entry animation */
+}
+
+#ticketForm h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#ticketForm input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #fff;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+#ticketForm input:focus {
+    border-color: #3d11cd; /* Focus color */
+    outline: none;
+}
+
+#ticketForm button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #30c1a9;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+#ticketForm button:hover {
+    background-color: #0286b3; /* Hover color */
+    transform: scale(1.05); /* Subtle scaling effect */
+}
+
+#ticketForm .btn-close {
+    background-color: #ccc;
+    color: #333;
+    margin-top: 15px;
+}
+
+#ticketForm .btn-close:hover {
+    background-color: #999;
+}
+
+/* Add Smooth Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
